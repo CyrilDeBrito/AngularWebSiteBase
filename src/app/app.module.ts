@@ -10,11 +10,13 @@ import { FormsModule } from '@angular/forms';
 
 
 import { DevelopersModule } from './developers/developers.module';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

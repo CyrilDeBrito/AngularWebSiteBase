@@ -5,8 +5,9 @@
         <img [src]="dev.img">
         <!-- <div>{{dev.description}}</div> -->
         <app-binding></app-binding>
-        <span [ngClass]="dev.price > 500? 'red':'green'">{{dev.price}} €</span>
+        <span [ngClass]="dev.price > 500? 'card red':'card green'">{{dev.price}} €</span>
             <button class="btn btn-outline-primary">Rent</button>
+            <button (click)="delete(dev.id)">DELETE</button>
       </div>
     </div>
     <!-- 2 card -->

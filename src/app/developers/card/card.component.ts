@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Developer } from '../model/developer';
 import { DeveloperService } from '../service/developer-service';
 
@@ -11,11 +11,14 @@ export class CardComponent implements OnInit {
 
   developers: Developer[] = [];
   
-  constructor(service: DeveloperService) {
+  constructor(private service: DeveloperService) {
     this.developers = service.getDevelopersByPriceSortedASC();
    }
 
   ngOnInit() {
   }
 
+    delete(id: number) {
+      this.service.deleteDeveloperById(id);
+    }
 }
