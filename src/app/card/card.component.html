@@ -1,25 +1,14 @@
-<div class="container">
-
-  <!-- Header -->
-  <div class="row">
-    <div class="col-sm-12 col-md-12 col-lg-4 col-xl-12">
-      <div class="header">
-        <span>Rent a Dev</span>
+<div class="row">
+    <div *ngFor="let dev of developers" class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+      <div class="card">
+        <span>{{dev.name}}</span>
+        <img [src]="dev.img">
+        <!-- <div>{{dev.description}}</div> -->
+        <app-binding></app-binding>
+        <span [ngClass]="dev.price > 500? 'red':'green'">{{dev.price}} €</span>
+            <button class="btn btn-outline-primary">Louer</button>
       </div>
     </div>
-  </div>
-
-<app-card>
-</app-card>
-  <!-- 1 card -->
-  <!-- <div class="row">
-    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-      <div class="card">
-        <img src="assets/img/personnage-png-300x300.png">
-        <button class="btn btn-outline-primary">Louer</button>
-      </div>
-    </div> -->
-
     <!-- 2 card -->
     <!-- <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
       <div class="card">
@@ -36,10 +25,3 @@
       </div>
     </div>
   </div> -->
-
-</div>
-
-
-
-
-<router-outlet></router-outlet>

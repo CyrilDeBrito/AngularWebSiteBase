@@ -1,5 +1,6 @@
 # AdopteUnDev
 
+Necessary install NPM if you clone this project on your computer, CLI cmd : npm install
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.24.
 
 ## Development server
