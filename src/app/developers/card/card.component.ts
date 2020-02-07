@@ -12,7 +12,7 @@ export class CardComponent implements OnInit {
   developers: Developer[] = [];
   
   constructor(service: DeveloperService) {
-    this.developers = service.getDevelopersByPriceSorted();
+    this.developers = service.getDevelopersByPriceSortedASC();
    }
 
   ngOnInit() {

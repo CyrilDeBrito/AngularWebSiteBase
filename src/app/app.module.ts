@@ -6,26 +6,25 @@ import { AppComponent } from './app.component';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { CardComponent } from './card/card.component';
-
-import { DeveloperService } from './service/developer-service';
 import { FormsModule } from '@angular/forms';
-import { BindingComponent } from './binding/binding.component';
+
+
+import { DevelopersModule } from './developers/developers.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent,
-    BindingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    DevelopersModule,
   ],
-  providers: [DeveloperService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

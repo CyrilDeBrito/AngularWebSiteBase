@@ -14,10 +14,14 @@ export class DeveloperService {
     return DEVELOPERS.sort((a, b) => a.id - b.id);
   }
 
-  getDevelopersByPriceSorted(): Developer[] {
+  getDevelopersByPriceSortedDESC(): Developer[] {
     return DEVELOPERS.sort((a, b) => b.price - a.price);
   }
  
+  getDevelopersByPriceSortedASC(): Developer[] {
+    return DEVELOPERS.sort((a, b) => a.price - b.price);
+  }
+
   getDevelopersByName(name: string): Developer {
     return DEVELOPERS.find(developer => developer.name === name);
   }

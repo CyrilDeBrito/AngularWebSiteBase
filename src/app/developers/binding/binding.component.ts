@@ -17,7 +17,7 @@ export class BindingComponent implements OnInit {
   }
 
   getSource() {
-    return 'assets/img.png';
+    return '../assets/img/personnage-png-300x300.png';
   }
 
   onClick(args: string) {
